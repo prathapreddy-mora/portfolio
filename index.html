@@ -3,60 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prathap Reddy Mora | Software Engineer Portfolio</title>
+  <title>Prathap Reddy Mora | Portfolio</title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Prathap Reddy Mora - Aspiring Software Engineer | MERN Stack Developer | AI Enthusiast | Portfolio showcasing skills and projects.">
-  <meta name="keywords" content="Prathap Reddy Mora, Portfolio, Software Engineer, MERN, AI, Projects, Web Development, Full-Stack Developer">
-  <meta name="author" content="Prathap Reddy Mora">
-
-  <!-- Social Media / Open Graph -->
-  <meta property="og:title" content="Prathap Reddy Mora | Software Engineer Portfolio">
-  <meta property="og:description" content="Portfolio showcasing my skills, projects, and professional journey.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://prathapreddymora.github.io/portfolio/">
-  <meta property="og:image" content="profile.jpg">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="profile.jpg">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav>
-  <div class="logo">
-    <img src="profile.jpg" alt="Prathap Reddy Mora">
-    <span>Prathap Reddy Mora</span>
-  </div>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Prathap</div>
   <ul>
+    <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Achievements</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- Header -->
-<header>
-  <h1 class="gradient-text">Hi, I'm Prathap Reddy Mora</h1>
-  <p>Aspiring Software Engineer | MERN Stack Developer | AI Enthusiast</p>
-</header>
-
-<!-- About Section -->
-<section class="card" id="about">
-  <h2 class="gradient-text">About Me</h2>
-  <p>I am a passionate Computer Science & Engineering student focused on full-stack development and Artificial Intelligence. I enjoy learning new technologies, solving real-world problems, and building practical software solutions.</p>
+<!-- HERO -->
+<section id="home" class="hero">
+  <img src="profile.jpg" class="hero-img">
+  <h1>Hi, I'm Prathap Reddy Mora</h1>
+  <p>I build scalable web applications using MERN Stack and AI</p>
+  <a href="#projects" class="btn">View Projects</a>
 </section>
 
-<!-- Skills Section -->
-<section class="card" id="skills">
-  <h2 class="gradient-text">Skills</h2>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate Computer Science student focused on building real-world 
+    applications using modern technologies. I enjoy solving problems, learning 
+    new tools, and contributing to innovative solutions.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
   <div class="skills">
     <span>Java</span>
     <span>Python</span>
@@ -67,58 +58,60 @@
   </div>
 </section>
 
-<!-- Projects Section -->
-<section class="card" id="projects">
-  <h2 class="gradient-text">Projects</h2>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
 
-  <div class="project">
+  <div class="project-card">
     <h3>Hostel Management System</h3>
-    <p class="project-desc">A web app to efficiently manage hostel operations, including student records, fees, and room allocation.</p>
-    <button class="toggle-btn">Show Tech Stack</button>
-    <p class="project-tech">Java, HTML, CSS, JavaScript, MySQL</p>
+    <p>Efficient system to manage hostel operations and student data.</p>
+    <div class="buttons">
+      <a href="#" class="btn">GitHub</a>
+      <a href="#" class="btn">Live Demo</a>
+    </div>
   </div>
 
-  <div class="project">
+  <div class="project-card">
     <h3>Face Detection</h3>
-    <p class="project-desc">Real-time face detection using OpenCV for security and attendance purposes.</p>
-    <button class="toggle-btn">Show Tech Stack</button>
-    <p class="project-tech">Python, OpenCV, Flask</p>
-  </div>
-
-  <div class="project">
-    <h3>Portfolio Website</h3>
-    <p class="project-desc">Showcases my skills, projects, and professional journey.</p>
-    <button class="toggle-btn">Show Tech Stack</button>
-    <p class="project-tech">HTML, CSS, JavaScript, GitHub Pages</p>
+    <p>Real-time face detection using OpenCV and Python.</p>
+    <div class="buttons">
+      <a href="#" class="btn">GitHub</a>
+      <a href="#" class="btn">Live Demo</a>
+    </div>
   </div>
 
 </section>
 
-<!-- Contact Section -->
-<section class="card" id="contact">
-  <h2 class="gradient-text">Contact</h2>
-  <p>Email: <a href="mailto:prathapreddymora8@gmail.com">prathapreddymora8@gmail.com</a></p>
-  <div class="contact-buttons">
-    <a href="https://www.linkedin.com/in/prathap-reddy-mora" target="_blank" class="btn linkedin">LinkedIn</a>
-    <a href="https://github.com/prathapreddymora" target="_blank" class="btn github">GitHub</a>
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section">
+  <h2>Achievements</h2>
+
+  <ul class="achievements">
+    <li>🏆 1st Prize - QIS Fest 2026 (International Meet)</li>
+    <li>🥉 3rd Prize - QIS Fest 2025 (Recycling Stream)</li>
+    <li>🎓 Participated in multiple technical events</li>
+    <li>🌍 Attended external workshops & seminars</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+
+  <a href="mailto:prathapreddymora8@gmail.com" class="btn">Email Me</a>
+
+  <div class="buttons">
+    <a href="https://github.com/prathapreddymora" class="btn">GitHub</a>
+    <a href="https://www.linkedin.com/in/prathap-reddy-mora" class="btn">LinkedIn</a>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Prathap Reddy Mora | Designed with ❤️</p>
+  <p>© 2026 Prathap Reddy Mora</p>
 </footer>
 
-<script>
-  // Toggle Project Tech Stack
-  const buttons = document.querySelectorAll('.toggle-btn');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tech = btn.nextElementSibling;
-      tech.style.display = tech.style.display === 'block' ? 'none' : 'block';
-    });
-  });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

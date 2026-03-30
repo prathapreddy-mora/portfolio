@@ -1,14 +1,9 @@
-Script .js
-function toggleProject(button) {
-  const details = button.closest('.project').querySelector('.project-details');
-
-  if (details.style.display === "block") {
-    details.style.display = "none";
-    button.innerText = "Show";
-  } else {
-    details.style.display = "block";
-    button.innerText = "Hide";
-  }
-}
-
-img
+// Smooth scroll effect
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
