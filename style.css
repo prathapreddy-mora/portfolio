@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #81d4fa;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0288d1;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #6a1b9a;
+}
+
+/* Gradient Headers */
+.gradient-text {
+  background: linear-gradient(90deg, #81d4fa, #f48fb1, #b39ddb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #616161;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 800px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: linear-gradient(45deg, #f8bbd0, #b3e5fc);
+  color: #333;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: transform 0.5s ease-in-out;
+}
+
+.skills span:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* Projects */
+.project {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-left: 4px solid #0288d1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.project-tech {
+  display: none;
+  margin-top: 5px;
+  font-style: italic;
+  color: #616161;
+}
+
+.toggle-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #81d4fa;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background: #0288d1;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+  margin-top: 15px;
+}
+
+.contact-buttons .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.contact-buttons .btn.linkedin {
+  background: #0a66c2;
+}
+
+.contact-buttons .btn.github {
+  background: #333;
+}
+
+.contact-buttons .btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+/* Links */
+a {
+  color: #0288d1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6a1b9a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0288d1;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
