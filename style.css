@@ -1,88 +1,229 @@
-body {
+```css
+/* RESET */
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Navbar */
-.navbar {
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 40px;
-  background: #020617;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
-.navbar ul {
+/* LOGO */
+.logo {
   display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #81d4fa;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* NAV LINKS */
+nav ul {
   list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-.navbar ul li {
-  margin: 0 15px;
-}
-
-.navbar a {
-  color: white;
+nav ul li a {
   text-decoration: none;
+  color: #0288d1;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
 }
 
-/* Hero */
-.hero {
+/* UNDERLINE HOVER EFFECT */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #6a1b9a;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #6a1b9a;
+}
+
+/* HEADER */
+header {
   text-align: center;
   padding: 80px 20px;
 }
 
-.hero-img {
-  width: 120px;
-  border-radius: 50%;
-  margin-bottom: 15px;
+header h1 {
+  font-size: 2.8rem;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #3b82f6;
-  color: white;
+/* GRADIENT TEXT */
+.gradient-text {
+  background: linear-gradient(90deg, #81d4fa, #f48fb1, #b39ddb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+/* CARDS */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  margin: 25px auto;
+  padding: 30px;
   border-radius: 20px;
-  text-decoration: none;
-  margin-top: 10px;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
-/* Sections */
-.section {
-  padding: 40px 20px;
-  text-align: center;
+/* CARD HOVER */
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
 }
 
-/* Skills */
+/* SKILLS */
 .skills span {
   display: inline-block;
-  background: #1e293b;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 10px;
+  background: linear-gradient(45deg, #f8bbd0, #b3e5fc);
+  padding: 8px 15px;
+  margin: 6px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-/* Projects */
-.project-card {
-  background: #1e293b;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 15px;
-  width: 80%;
+.skills span:hover {
+  transform: translateY(-5px) scale(1.1);
 }
 
-/* Achievements */
-.achievements li {
-  margin: 10px 0;
+/* PROJECTS */
+.project {
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 4px solid #0288d1;
+  transition: 0.3s;
 }
 
-/* Footer */
+.project:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  margin-bottom: 5px;
+}
+
+.project-tech {
+  margin-top: 5px;
+  font-style: italic;
+  color: #616161;
+}
+
+/* CONTACT BUTTONS */
+.contact-buttons {
+  margin-top: 15px;
+}
+
+.contact-buttons .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* BUTTON COLORS */
+.linkedin {
+  background: #0a66c2;
+}
+
+.github {
+  background: #333;
+}
+
+/* BUTTON HOVER */
+.contact-buttons .btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+/* LINKS */
+a {
+  color: #0288d1;
+}
+
+a:hover {
+  color: #6a1b9a;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background: #020617;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0288d1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
