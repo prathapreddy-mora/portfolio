@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Face detection artwork">
+  <rect width="800" height="480" fill="#0f172a"/>
+  <circle cx="400" cy="230" r="120" fill="none" stroke="#38bdf8" stroke-width="6"/>
+  <circle cx="400" cy="230" r="88" fill="none" stroke="#818cf8" stroke-width="3" stroke-dasharray="8 10"/>
+  <ellipse cx="400" cy="250" rx="54" ry="66" fill="#1e293b"/>
+  <circle cx="378" cy="232" r="8" fill="#7dd3fc"/>
+  <circle cx="422" cy="232" r="8" fill="#7dd3fc"/>
+  <path d="M378 270 Q400 286 422 270" fill="none" stroke="#93c5fd" stroke-width="4"/>
+  <rect x="250" y="110" width="36" height="6" fill="#38bdf8"/>
+  <rect x="250" y="110" width="6" height="36" fill="#38bdf8"/>
+  <rect x="514" y="110" width="36" height="6" fill="#38bdf8"/>
+  <rect x="544" y="110" width="6" height="36" fill="#38bdf8"/>
+  <rect x="250" y="334" width="36" height="6" fill="#38bdf8"/>
+  <rect x="250" y="304" width="6" height="36" fill="#38bdf8"/>
+  <rect x="514" y="334" width="36" height="6" fill="#38bdf8"/>
+  <rect x="544" y="304" width="6" height="36" fill="#38bdf8"/>
+</svg>

@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Instrument Serif", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-ink: #0f172a;
+  --color-mist: #f7fbff;
+  --color-sky: #3b82f6;
+  --color-ice: #7dd3fc;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #f7fbff;
+  color: #0f172a;
+  overflow-x: hidden;
+  letter-spacing: -0.011em;
+}
+
+.dark body,
+:is(.dark) body {
+  background: #070b14;
+  color: #e8eefc;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.28);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.38));
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 20px 50px rgba(56, 189, 248, 0.08);
+  backdrop-filter: blur(24px) saturate(160%);
+}
+
+.dark .glass {
+  background: linear-gradient(180deg, rgba(18, 28, 48, 0.7), rgba(10, 16, 30, 0.48));
+  border: 1px solid rgba(148, 187, 255, 0.14);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 20px 50px rgba(0, 0, 0, 0.28);
+}
+
+.glass-circle {
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+}
+
+.dark .glass-circle {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.spin-border {
+  animation: spinBorder 8s linear infinite;
+}
+
+@keyframes spinBorder {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.has-custom-cursor,
+.has-custom-cursor * {
+  cursor: none;
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .has-custom-cursor,
+  .has-custom-cursor * {
+    cursor: auto;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 90;
+  border-radius: 999px;
+  background: #0f172a;
+  color: white;
+  padding: 0.6rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
